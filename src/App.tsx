@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Button, OptionList, Option } from "@onfido/castor-react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Button</h1>
+      <Button>Hello Castor</Button>
+      <h1>Options</h1>
+      <OptionList>
+        <Option hidden value="">
+          I am hidden!
+        </Option>
+        <Option value={1}>Option</Option>
+        <Option disabled value={2}>
+          Disabled option
+        </Option>
+        <Option value="long">Longer option that is quite long</Option>
+        <Option value="enormous">
+          An enormously long option that spans over two lines
+        </Option>
+      </OptionList>
     </div>
   );
 }

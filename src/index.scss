@@ -1,0 +1,8 @@
+@use "@onfido/castor";
+
+:root {
+  @include castor.day();
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@include castor.components();
